@@ -311,8 +311,6 @@ class RecordStore(object):
         # convert singletons into lists if needed
         if isinstance(aggregate, dict):
             aggregate = [aggregate]
-        if isinstance(filter, dict):
-            filter = [filter]
         if isinstance(sort, dict):
             sort = [sort]
 
@@ -328,10 +326,8 @@ class RecordStore(object):
                 "type": type,
             },
             "query": {
-                "aggregate": aggregate,
+                "aggregations": aggregate,
                 "filter": filter,
-                "filter_operator": filter_operator,
-                "sort": sort,
             },
         }
 
