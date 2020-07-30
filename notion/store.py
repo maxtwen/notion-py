@@ -328,6 +328,7 @@ class RecordStore(object):
             "query": {
                 "aggregations": aggregate,
                 "filter": filter,
+                "sort": sort
             },
         }
 
